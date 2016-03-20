@@ -29,7 +29,6 @@ export function build() {
         files('lib/**/*.styl'),
         read(),
         stylus(),
-        rename(file => file.replace(/\.styl$/, '.css')),
         write('build/')
     );
 }
@@ -39,7 +38,14 @@ This task relies on `[{ path, data, map }]` input and provides the same, see [do
 
 ## Arguments
 
-`stylus(plugins, options)`
+`stylus(options)`
 
-* `plugins` – [stylus plugins](https://github.com/stylus/stylus#plugins), `[]` by default
-* `options` – [stylus options](https://github.com/stylus/stylus#options)
+To use plugins like [rupture](https://jenius.github.io/rupture/) or include sourcemaps or any other option for stylus, just do it like that:
+```
+  const options = {
+    use: [rupture()],
+    sourcemap: true,
+    ...
+  }
+
+[options](http://stylus-lang.com/docs/js.html)
