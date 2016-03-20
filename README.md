@@ -1,6 +1,6 @@
 # start-stylus
 
-[stylus](http://stylus-lang.org/) task for [Start](https://github.com/start-runner/start).
+[stylus](http://stylus-lang.com/) task for [Start](https://github.com/start-runner/start).
 
 ## Install
 
